@@ -1,0 +1,83 @@
+<!--This is the room the user will be viewing on his browser-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Video Chat</title>
+   <script>
+      const ROOM_ID = "<%= roomId %>"
+   </script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+           integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+           crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+           integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+   </script>
+   <script src="/socket.io/socket.io.js" defer></script>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+   <script src="script.js" defer></script>
+   
+</head>
+<body>
+   <div class="main">
+      <!-- This will be the starting point of the page-->
+      <div id="start">
+         <div class="before-join">
+            <img class="gif" src="animation.gif" alt="animated-gif">
+            <h3>Click here to join the meet</h3>
+            <div class="join-button">
+              <button onclick="joinMeet()">Join the meeting</button>
+            </div>
+         </div>
+      </div>
+
+      <!-- This will be the divison where videos as well as the buttons like mute.... will be displayed-->
+      <div id="meet">
+         <div class="videos">
+            <div id="video-grid">
+            </div>
+         </div>
+
+         <div class="controls">
+               <div onclick="muteUnmute()" id="audio" class="button">
+                  <i class="fas fa-microphone"></i>
+                  <span>Mute</span>
+               </div>
+
+               <div onclick="playStop()" id="video" class="button" >
+                  <i class="fas fa-video"></i>
+                  <span>Stop Video</span>
+               </div>
+
+               <div onclick="leave()" class="button">
+                  <span class="leave_meeting">Leave Meeting</span>
+               </div>           
+         </div>
+      </div>
+      
+      <!-- This is the chat box of the room -->
+      <div class="chat">
+         <div class="heading">
+            <h4>Chat</h4>
+         </div>
+
+         <div class="chat-tab">
+            <ul class="messages"></ul>
+         </div>
+         
+         <!-- Message input will be done -->
+         <div class="message-input">
+            <input id="chat_message" type="text" placeholder="Type message here...">
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

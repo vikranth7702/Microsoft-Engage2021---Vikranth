@@ -1,0 +1,119 @@
+/*styling of the room will be done here*/
+
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+/* Styling the starting look of our page */
+#start{
+    flex: 0.75;
+    display: flex;
+    flex-direction: column;
+    background-color: #ecedff;
+}
+.before-join{
+    text-align: center;
+    color: #282c6a;
+    margin: 0 auto;
+}
+.gif{
+    margin: 0 auto;
+}
+.join-button{
+    margin: 0 auto;
+}
+
+/* Styling the meeting place of our room */
+#meet {
+    flex: 0.75;
+    display: none;
+    flex-direction: column;
+}
+.videos {
+    flex-grow: 1;
+    background-color: #ecedff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+#video-grid{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+video{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    padding: 8px;
+ }
+
+/* Styling the mute audio/video,leave meeting buttons */
+.controls {
+    background-color: #424999;
+    color: white;
+    display: flex;
+    justify-content: centre;
+    padding: 5px;
+}
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #1c2471;
+    border-radius: 5px;
+}
+.button i {
+    font-size: 24px;
+}
+
+/* Styling the look of the Chat coloum of the page */
+.chat {
+    flex: 0.25;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid white;
+}
+.heading{
+    padding-top: 5px;
+    color: white;
+    background-color: #424999;
+    text-align: center;
+    margin-bottom: solid white;
+}
+.chat-tab {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #424999;
+}
+.messages{
+    color: white;
+    list-style: none;
+}
+.message-input {
+    padding: 22px 12px;
+    display: flex;
+    background-color: #424999;
+}
+.message-input input {
+    flex-grow: 1;
+    border: solid;
+    color: #424999;
+}
+
+/*adding colours for unmute audio/video and leave buttons */
+.leave_meeting {
+    color: #f71104;
+}
+.unmute, .stop {
+    color: #CC3B33;
+}
