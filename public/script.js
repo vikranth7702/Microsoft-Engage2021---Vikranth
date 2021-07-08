@@ -4,7 +4,7 @@ const socket = io('/')
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
-  port: '443'
+  port: '3000'
 })
 myPeer.on('open', id => {
   socket.emit('join-room', ROOM_ID, id)
@@ -76,7 +76,7 @@ function addVideoStream(video, stream) {
 
 // Setting the functions of mute or unmute audio buttons
 let isAudio=true;
-function muteUnmute(){
+function mute(){
   isAudio = !isAudio;
   localStream.getAudioTracks()[0].enabled = isAudio;
   if(isAudio){
@@ -93,7 +93,7 @@ function muteUnmute(){
 
 // Setting the functions of play or stop video buttons
 let isVideo = true;
-function playStop(){
+function stop(){
   isVideo = !isVideo;
   localStream.getVideoTracks()[0].enabled = isVideo;
   if(isVideo){
