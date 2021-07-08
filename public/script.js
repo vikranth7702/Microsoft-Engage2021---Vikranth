@@ -4,7 +4,7 @@ const socket = io('/')
 const myPeer = new Peer(undefined, {
   path: '/peerjs',
   host: '/',
-  port: '3000'
+  port: '443'
 })
 myPeer.on('open', id => {
   socket.emit('join-room', ROOM_ID, id)
