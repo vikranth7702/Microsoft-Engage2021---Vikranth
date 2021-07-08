@@ -40,7 +40,7 @@
     flex-grow: 1;
     overflow-y: auto;
 }
-/*#video-grid{
+#video-grid{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -50,7 +50,7 @@ video{
     width: 400px;
     object-fit: cover;
     padding: 8px;
- }*/
+ }
 
 /* Styling the mute audio/video,leave meeting buttons */
 .controls {
