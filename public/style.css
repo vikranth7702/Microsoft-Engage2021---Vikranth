@@ -78,7 +78,6 @@ video{
 /* Styling the look of the Chat coloum of the page */
 .chat {
     flex: 0.25;
-    height: 100%;
     display: flex;
     flex-direction: column;
     border-left: 1px solid white;
