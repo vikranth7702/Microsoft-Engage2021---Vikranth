@@ -37,9 +37,9 @@ io.on('connection', socket => {
     socket.join(roomId)
     socket.broadcast.to(roomId).emit('user-connected', userId);
 
-    // sending the message from one user to other
+    // sending the message and time of message from one user to other
     socket.on('message', (message) => {
-      io.to(roomId).emit('createMessage', { message: message, userName: users[socket.id]})
+      io.to(roomId).emit('createMessage', { message: message, userName: users[socket.id], datetime: new Date().getTime()})
       }); 
     
     // Disconnectiong the user

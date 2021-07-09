@@ -54,8 +54,8 @@ video{
 
 /* Styling the mute audio/video,leave meeting buttons */
 .controls {
-    background-color: #424999;
-    color: white;
+    background-color: white;
+    color: #424999;
     display: flex;
     justify-content: centre;
     padding: 5px;
@@ -70,7 +70,7 @@ video{
     cursor: pointer;
 }
 .button:hover {
-    background-color: #1c2471;
+    background-color: #b2b6e7;
     border-radius: 5px;
 }
 .button i {
@@ -110,10 +110,16 @@ video{
     border: solid;
     color: #424999;
 }
+#time{
+    font-size: small;
+    color: lightgray;
+}
 
 /*adding colours for unmute audio/video and leave buttons */
 .leave_meeting {
     color: #f71104;
+    font-size: large;
+    font-style: bold;
 }
 .unmute, .stop {
     color: #CC3B33;
