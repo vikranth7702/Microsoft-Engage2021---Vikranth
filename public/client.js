@@ -41,13 +41,23 @@ function joinMeet(){
     }) 
 
     socket.on('user-connected', userId => {
-      connectNewUser(userId, stream)
+      connectNewUser(userId, stream);
     })
   })
 }
+//showing that user has joined in chat box
+socket.on('user-joined', userName =>{
+  $("ul").append(`<li class="join-info">${userName} has joined</li>`)
+})
+
  // Disconnecting the user
 socket.on('user-disconnected', userId => {
-  if (peers[userId]) peers[userId].close()
+  if (peers[userId]) peers[userId].close();
+})
+
+//showing that user has left
+socket.on('user-left', userName =>{
+  $("ul").append(`<li class="join-info">${userName} has left</li>`)
 })
 
 
@@ -120,7 +130,7 @@ $('html').keydown(function (e) {
 });
 socket.on("createMessage", messages => {
   $("ul").append(`<li class="message"><b>${messages.userName}:</b><br/>${messages.message}<br/>
-    <span id="time">${new Date(messages.datetime)}</span></li>`);
+    <span id="time">${messages.time}</span></li>`);
   scrollToBottom($('.chat-tab'))
 })
 // Function to scroll within the chat tab

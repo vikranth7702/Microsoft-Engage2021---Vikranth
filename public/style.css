@@ -114,6 +114,11 @@ video{
     font-size: small;
     color: lightgray;
 }
+.join-info{
+    text-align: center;
+    font-size: medium;
+    color: lightgray;
+}
 
 /*adding colours for unmute audio/video and leave buttons */
 .leave_meeting {

@@ -35,16 +35,20 @@ io.on('connection', socket => {
   // Connecting the user to other users
   socket.on('join-room', (roomId, userId) => {
     socket.join(roomId)
-    socket.broadcast.to(roomId).emit('user-connected', userId);
+    socket.to(roomId).emit('user-connected', userId);
+    io.to(roomId).emit('user-joined', users[socket.id])
 
     // sending the message and time of message from one user to other
     socket.on('message', (message) => {
-      io.to(roomId).emit('createMessage', { message: message, userName: users[socket.id], datetime: new Date().getTime()})
+      var today = new Date();
+      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      io.to(roomId).emit('createMessage', { message: message, userName: users[socket.id], time: time})
       }); 
     
     // Disconnectiong the user
     socket.on('disconnect', () => {
-      socket.broadcast.to(roomId).emit('user-disconnected', userId)
+      socket.to(roomId).emit('user-disconnected', userId)
+      socket.to(roomId).emit('user-left', users[socket.id])
       });
     });
 });
