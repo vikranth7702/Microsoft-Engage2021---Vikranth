@@ -18,7 +18,7 @@ I have followed **Agile Scrum Methodology** to build this project.<br/>
 Each iteration has sprints, where the goal in each sprint is to build the most important feature first and then improve the project  as a potentially deliverable product.
 Microsfot has provided us with sprints :**Design, Build, Adopt** which are 1-2 weeks each.<br/>
 After researching about **webRTC** and how it works
-I have further made my own sprints in the **Build and Adopt phases** of length 1-2 days each.
+I have further made my own sprints in the **Build and Adopt phases** of length 1-2 days each. They are:
 1. Initializing a server and a starting web page.
 2. Adding the ability to stream my own video( *local video*)
 3. Connecting other clients and ability to see their video.
