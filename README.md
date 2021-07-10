@@ -48,8 +48,8 @@ To install the dependencies use the command `npm install`.<br/>
 For example to install socket.io, use `npm install socket.io`.
 ## Files 
 The html page of the website the user will be seeing on his browser is the **room.ejs** file in **views** folder.<br/>
-ejs stands for **embedde java script** and it is used to create HTML pages with plain javascript.<br/>
-The public folder contains the **client.js server file, style.css styling file and an animantion.gif** .
+ejs stands for **embedded java script** and it is used to create HTML pages with plain javascript.<br/>
+The public folder contains the **client.js server file, style.css styling file and an animation.gif** .
 <br/>
 <br/>
 **Note:** *This code can't be run on localhost because of the port used in client.js file. It needs to be deployed before using.* 
