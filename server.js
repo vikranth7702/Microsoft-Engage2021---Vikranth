@@ -40,9 +40,7 @@ io.on('connection', socket => {
 
     // sending the message and time of message from one user to other
     socket.on('message', (message) => {
-      var today = new Date();
-      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      io.to(roomId).emit('createMessage', { message: message, userName: users[socket.id], time: time})
+      io.to(roomId).emit('createMessage', { message: message, userName: users[socket.id]})
       }); 
     
     // Disconnectiong the user

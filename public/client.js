@@ -129,8 +129,10 @@ $('html').keydown(function (e) {
   }
 });
 socket.on("createMessage", messages => {
+  var today = new Date();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   $("ul").append(`<li class="message"><b>${messages.userName}:</b><br/>${messages.message}<br/>
-    <span id="time">${messages.time}</span></li>`);
+    <span id="time">${time}</span></li>`);
   scrollToBottom($('.chat-tab'))
 })
 // Function to scroll within the chat tab
