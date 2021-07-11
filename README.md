@@ -1,7 +1,8 @@
 # Microsoft-Engage2021--Vikranth
 ## Deployed Link of the project
 This is the link of the web application after deploying the code on **heroku**:
-https://videocalling-by-nvc.herokuapp.com/
+https://videocalling-by-nvc.herokuapp.com/<br/>
+**Kindly note that, not jut 2 users but any number of users can have video conference using this application**
 
 ## Video demo of the website
 The video demo of the website can be found here 
